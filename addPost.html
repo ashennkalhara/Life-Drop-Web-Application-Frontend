@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Campaign Post</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blood-campaign">
+        <h1>Blood Campaign Post</h1>
+        <div class="container">
+            <div class="photo">
+                <div class="photo-frame">
+                    <img src="placeholder_image.jpg" alt="Blood Campaign Photo" id="campaignPhoto">
+                    <input type="file" id="photoUpload" accept="image/*">
+                </div>
+            </div>
+            <div class="content">
+                <form id="campaignForm" action="#" method="post">
+                    <input type="text" name="name" id="name" placeholder="Enter Name" required>
+                    <textarea name="description" id="description" placeholder="Enter Description" rows="4" required></textarea>
+                    <input type="text" name="city" id="city" placeholder="Enter City" required>
+                    <input type="time" name="time" id="time" required>
+                    <input type="date" name="date" id="date" required>
+                    <button class="btn" type="button" onclick="submitCampaign()">
+                        Add Post
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Photo</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>City</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody id="campaignData">
+        
+                <tr>
+                    <td>Photo Data</td>
+                    <td>Name Data</td>
+                    <td>Description Data</td>
+                    <td>City Data</td>
+                    <td>Time Data</td>
+                    <td>Date Data</td>
+                    <td>
+                        <button class="btn" type="button" onclick="updateCampaign()">Update</button>
+                        <button class="btn" type="button" onclick="deleteCampaign()">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
